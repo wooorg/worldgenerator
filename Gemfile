@@ -48,5 +48,31 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'rspec-rails', '~> 3.0'
+
+  #http://jacubeit.com/2013/08/31/rails-4-bdd-setup/
+  gem 'better_errors'
+  #https://github.com/Springest/terminal-notifier-guard
+  gem 'terminal-notifier-guard', '~> 1.6.1'
+
+  gem 'cucumber-rails', :require => false
+
+  gem 'factory_girl_rails'
+  gem 'rb-fsevent'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'awesome_print'
+  gem 'jazz_hands'
+  gem 'quiet_assets'
+
 end
 
+group :test do
+  gem 'capybara'
+  gem 'launchy', '>= 2.1.2'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'airborne'
+  gem 'selenium-webdriver'
+end
