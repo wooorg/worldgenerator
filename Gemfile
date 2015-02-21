@@ -57,6 +57,7 @@ group :development, :test do
   #http://jacubeit.com/2013/08/31/rails-4-bdd-setup/
   gem 'better_errors'
   #https://github.com/Springest/terminal-notifier-guard
+  gem 'terminal-notifier'
   gem 'terminal-notifier-guard', '~> 1.6.1'
 
   gem 'cucumber-rails', :require => false
