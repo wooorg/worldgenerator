@@ -77,7 +77,6 @@ end
 group :test do
   gem 'capybara'
   gem 'launchy', '>= 2.1.2'
-  gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'airborne'
   gem 'selenium-webdriver'
