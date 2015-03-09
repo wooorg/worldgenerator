@@ -11,10 +11,18 @@
 /log/*
 !/log/.keep
 /tmp
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
 
 /db/*.sqlite3
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
 
 #ide
 *.sublime-*
 
-/.DS_Store
+/.DS_Store#ide
+*.sublime-*
