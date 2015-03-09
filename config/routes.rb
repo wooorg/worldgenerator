@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   root 'root#index'
 
+  resources :stories, :defaults => { :format => 'json' }
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
