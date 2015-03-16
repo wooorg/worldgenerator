@@ -26,3 +26,5 @@
 
 /.DS_Store#ide
 *.sublime-*
+.DS_Store
+db/.DS_Store
