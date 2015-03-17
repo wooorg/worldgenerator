@@ -3,9 +3,14 @@ Rails.application.routes.draw do
   #API resources
   mount Worldgenerator::API => '/'
 
-  root 'root#index'
+  root to: 'root#index'
 
   resources :stories, :defaults => { :format => 'json' }
+
+  mount Upmin::Engine => '/admin'
+  
+  devise_for :users
+  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

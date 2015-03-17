@@ -8,11 +8,17 @@ gem 'sqlite3'
 gem 'couchbase'
 gem 'couchbase-model'
 
+gem 'devise'
+
 # Use grape for api generation
 gem 'grape'
 gem "hashie_rails"
 # Api doc
 gem 'grape-swagger'
+
+gem 'haml-rails'
+gem 'simple_form'
+gem 'upmin-admin'
 
 # Use SASS syntax for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -60,6 +66,16 @@ group :development, :test do
   gem 'spring'
 
   gem 'rspec-rails', '~> 3.0'
+  gem 'faker'
+  gem 'spring-commands-rspec'
+  gem 'binding_of_caller', :platforms=>[:mri_21]
+  gem 'guard-bundler'
+  gem 'guard-rails'
+  gem 'html2haml'
+  gem 'rails_layout'
+  gem 'rb-fchange', :require=>false
+  gem 'rb-fsevent', :require=>false
+  gem 'rb-inotify', :require=>false
 
   #http://jacubeit.com/2013/08/31/rails-4-bdd-setup/
   gem 'better_errors'
@@ -70,7 +86,6 @@ group :development, :test do
   gem 'cucumber-rails', :require => false
 
   gem 'factory_girl_rails'
-  gem 'rb-fsevent'
   gem 'guard-rspec'
   gem 'guard-cucumber'
   gem 'awesome_print'
@@ -82,6 +97,7 @@ end
 group :test do
   gem 'capybara'
   gem 'launchy', '>= 2.1.2'
+  gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'airborne'
   gem 'selenium-webdriver'
