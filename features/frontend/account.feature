@@ -5,7 +5,7 @@ Feature: Account
   Scenario: Registering to the website
     Given I'm a guest user
     When I visit the homepage
-    And I click on the registration link
+    And I click on the "Sign Up" link
     And I fill the form with my registration details
     Then I should be registered
 
@@ -13,7 +13,7 @@ Feature: Account
   Scenario: Logging to the website with right credentials
     Given I'm a registered user
     When I visit the homepage
-    And I click on the login link
+    And I click on the "Sign in" button
     And I fill the form with my right credentials
     Then I should be in the secured area
 
@@ -21,7 +21,7 @@ Feature: Account
   Scenario: Logging to the website with wrong credentials
     Given I'm a registered user
     When I visit the homepage
-    And I click on the login link
+    And I click on the "Sign in" button
     And I fill the form with my wrong credentials
     Then I should be in the secured area
 
@@ -53,6 +53,6 @@ Feature: Account
     When I visit the link to reset my password
     And I fill the form with my new password
     And I visit the homepage
-    And I click on the login link
+    And I click on the "Sign in" button
     And I fill the form with my new login details
     Then I should be in the secured area
