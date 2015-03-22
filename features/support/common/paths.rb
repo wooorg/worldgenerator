@@ -1,5 +1,6 @@
 When /^I visit the homepage$/ do
   pending
+  visit root_path
 end
 When /^I visit the dashboard$/ do
   pending

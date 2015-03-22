@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   mount Worldgenerator::API => '/'
 
   root to: 'root#index'
+  get '/dashboard', to: 'root#index'
 
   resources :stories, :defaults => { :format => 'json' }
 

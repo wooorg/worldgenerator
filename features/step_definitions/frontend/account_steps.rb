@@ -1,5 +1,15 @@
 When /^I fill the form with my registration details$/ do
   pending
+  fill_in 'Email', with: email
+  fill_in 'Password', with: password
+  fill_in 'Password confirmation', :with => confirmation
+  click_button 'Sign up'
+end
+When /^I fill the form with my right credentials$/ do
+  pending
+end
+When /^I fill the form with my wrong credentials$/ do
+  pending
 end
 Then /^I should be registered$/ do
   pending

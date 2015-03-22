@@ -37,3 +37,4 @@ feature 'User profile page', :devise do
   end
 
 end
+
