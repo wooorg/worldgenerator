@@ -9,16 +9,40 @@ module Worldgenerator
     helpers do
     end
 
-    resource :story do
-      desc "Return the story details"
-      get :details do
+    resource :stories do
+
+      desc "Return the story list"
+      get do
+        {
+          stories: [
             {
-              :type => "hunting",
-              :max_players => 10,
-              :max_radius => 5,
-              :max_zones => 5,
-              :started => true,
-              :ended => false
+              :id => 1,
+              :name => "First Story",
+              :current => true
+            },
+            {
+              :id => 2,
+              :name => "Second Story",
+              :current => false
+            }
+          ]
+        }
+      end
+      
+
+
+      desc "Return the story details"
+      get ':id' do
+            {
+              story: [
+                {
+                  :type => "hunting",
+                  :maxPlayers => 10,
+                  :startingPoint => [0,0],
+                  :maxSize => [20,30],
+                  :theme => "dark"
+                }
+              ]
             }
       end
 
@@ -61,6 +85,7 @@ module Worldgenerator
             }
         end
       end
+
     end
     
     add_swagger_documentation
